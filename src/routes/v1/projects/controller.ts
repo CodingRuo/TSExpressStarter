@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import EntityNotFoundError from "../../../errors/EntityNotFoundError";
 
 export const listProjects = (req: Request, res: Response) => {
     res.status(200).json([]);

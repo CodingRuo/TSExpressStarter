@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "test": "vitest",
-    "types": "npx gen-env-types .env"
+    "gen:types": "npx gen-env-types .env"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2",
+    "express": "^5.0.1",
     "morgan": "^1.10.0",
     "vitest": "^3.0.9"
   }

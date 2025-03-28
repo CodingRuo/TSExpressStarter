@@ -3,6 +3,7 @@ import morgan from "morgan";
 import cors from "cors";
 import config from "./config";
 import v1 from "./routes/v1";
+import errorHandler from "./middlewares/error-handler";
 
 export const bootStrap = () => {
   const app = express();
@@ -18,6 +19,8 @@ export const bootStrap = () => {
   });
 
   app.use("/v1", v1);
+
+  app.use(errorHandler);
 
   if (config.env !== "production") {
     console.clear();
