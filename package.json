@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "nodemon",
     "test": "vitest",
+    "prisma:generate": "prisma generate",
+    "migration:create": "prisma migrate dev --create-only",
+    "migrate": "prisma migrate deploy",
     "gen:types": "npx gen-env-types .env"
   },
   "keywords": [],
@@ -18,10 +21,12 @@
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.13.14",
     "nodemon": "^3.1.9",
+    "prisma": "^6.5.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   },
   "dependencies": {
+    "@prisma/client": "6.5.0",
     "cors": "^2.8.5",
     "express": "^5.0.1",
     "morgan": "^1.10.0",

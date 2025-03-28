@@ -17,6 +17,7 @@ export default function errorHandler( error: unknown, req: Request, res: Respons
                 code: error.code
             }
         })
+        return;
     }
 
     res.status(500).json({
