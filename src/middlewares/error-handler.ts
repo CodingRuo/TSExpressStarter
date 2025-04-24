@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 
 import { getErrorMessage } from "../utils";
-import config from "../config";
 import CustomError from "../errors/CustomError";
+import { config } from "@/config";
 
 export default function errorHandler( error: unknown, req: Request, res: Response, next: NextFunction ) {
     if (res.headersSent || config.debug) {
